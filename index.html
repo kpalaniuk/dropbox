@@ -26,13 +26,16 @@
       text-align: center;
       color: #333333;
     }
-    input[type="text"] {
+    input, select, textarea {
       width: 100%;
       padding: 12px 15px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
       box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
     }
     button {
       width: 100%;
@@ -55,6 +58,19 @@
     <form action="https://hook.us1.make.com/t13heics1qjl6kscn6tjiexmiayh4z5p" method="POST">
       <input type="text" name="First Name" placeholder="First Name" required />
       <input type="text" name="Last Name" placeholder="Last Name" required />
+      <input type="email" name="Email" placeholder="Email Address" required />
+      <input type="tel" name="Phone" placeholder="Phone Number" required />
+      
+      <select name="Transaction Type" required>
+        <option value="">Select Purchase or Refinance</option>
+        <option value="Purchase">Purchase</option>
+        <option value="Refinance">Refinance</option>
+      </select>
+
+      <input type="text" name="Lead Source" placeholder="Lead Source (e.g., Website, Referral, Ad)" />
+
+      <textarea name="Notes" rows="4" placeholder="Additional Notes..."></textarea>
+
       <button type="submit">Submit</button>
     </form>
   </div>
